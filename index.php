@@ -62,7 +62,7 @@
 
 			<img
 				src="https://bioshiitake.tirol/images/pilze.jpg"
-				width="30%"
+				class="banner-image"
 				alt="Pilze"
 			/>
 
