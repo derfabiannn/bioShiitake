@@ -121,6 +121,13 @@ h6 {
 	padding: 0 15px;
 }
 
+#main,
+#products,
+#about,
+#contact {
+	scroll-margin-top: 85px;
+}
+
 label {
 	font-weight: bold;
 	font-family: "HotThinRoof", sans-serif;
