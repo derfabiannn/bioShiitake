@@ -49,26 +49,19 @@ a {
 	padding: 20px 10px;
 	position: sticky;
 	top: 0;
+	display: flex;
+	justify-content: center;
 }
 
 .header a {
-	float: right;
 	color: white;
 	text-align: center;
 	padding: 12px;
 	margin-left: 20px;
-	margin-right: 20px;
 	text-decoration: none;
 	font-size: 18px;
 	line-height: 25px;
 	border-radius: 4px;
-}
-
-.header-image {
-	float: left;
-	margin: 0;
-	padding: 0;
-	height: 49px;
 }
 
 .header a:hover {
