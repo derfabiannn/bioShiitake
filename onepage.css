@@ -52,7 +52,7 @@ a {
 }
 
 .header a {
-	float: left;
+	float: right;
 	color: white;
 	text-align: center;
 	padding: 12px;
@@ -64,12 +64,6 @@ a {
 	border-radius: 4px;
 }
 
-/*.header-logo {
-	font-size: 40px;
-	font-weight: bold;
-	font-family: "HotThinRoof", sans-serif;
-}*/
-
 .header-image {
 	float: left;
 	margin: 0;
@@ -77,12 +71,8 @@ a {
 	height: 49px;
 }
 
-.header-right a:hover {
+.header a:hover {
 	background-color: #a5816c;
-}
-
-.header-right {
-	float: right;
 }
 
 .banner-image {
@@ -212,9 +202,7 @@ input[type="submit"]:hover {
 	}
 
 	.header a {
-		padding: 12px;
-		margin-left: 5px;
-		margin-right: 5px;
-		border-radius: 4px;
+		float: none;
+		margin: auto;
 	}
 }
