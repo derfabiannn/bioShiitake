@@ -1,11 +1,11 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] != "POST"){
-	header("Location: https://bioshiitake.tirol/contact.php?error=1&msg=noPost");
+	header("Location: https://bioshiitake.tirol/?error=1&msg=noPost");
 	die();
 }
 
 if(empty($_POST["name"]) OR empty($_POST["email"]) OR empty($_POST["betreff"]) OR empty($_POST["nachricht"]) OR !empty($_POST["testfield"])){
-	header("Location: https://bioshiitake.tirol/contact.php?error=1&msg=notAllSet");
+	header("Location: https://bioshiitake.tirol/?error=1&msg=notAllSet");
 	die();
 }
 
@@ -15,7 +15,7 @@ $betreff = htmlspecialchars($_POST["betreff"]);
 $message = htmlspecialchars($_POST["nachricht"]);
 
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)){
-	header("Location: https://bioshiitake.tirol/contact.php?error=1&msg=invalidEmail");
+	header("Location: https://bioshiitake.tirol/?error=1&msg=invalidEmail");
 	die();
 }
 
@@ -56,11 +56,11 @@ try {
     $mail->send();
     
 	
-	header("Location: https://bioshiitake.tirol/contact.php?error=0");
+	header("Location: https://bioshiitake.tirol/?error=0");
 	die();
 } catch (Exception $e) {
 	error_log("Message could not be sent. Mailer Error: {$mail->ErrorInfo}", 1, "admin@cafeshivani.at");
-	header("Location: https://bioshiitake.tirol/contact.php?error=1");
+	header("Location: https://bioshiitake.tirol/?error=1");
 	die();
 }
 ?>
