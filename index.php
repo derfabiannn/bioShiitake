@@ -22,7 +22,7 @@
 		<link rel="icon" href="images/logo.svg" type="image/jpeg" />
 	</head>
 	<body>
-		<div class="logo-space">
+		<div class="logo-space" id="main">
 			<img src="images/logo-07.png" class="logo-img" alt="BioShiitake Logo" />
 		</div>
 
@@ -36,7 +36,7 @@
 		<div class="main">
 			<!--<img src="images/logo-07.png" class="banner-image" alt="BioShiitake Logo">-->
 
-			<h1 id="main">Willkommen bei BioShiitake Tirol</h1>
+			<h1>Willkommen bei BioShiitake Tirol</h1>
 			<p>
 				Wir kultivieren unsere Shiitakepilze (Lentinula edodes) nach der
 				traditionellen japanischen Methode – das heißt, sie wachsen auf
@@ -96,6 +96,17 @@
 				<div class="hr-line"></div>
 			</div>
 
+			<?php
+			if(isset($_GET['error']) AND $_GET['error'] == 1){
+				echo '<h2 style="color: red; text-align: center;">Leider ist bei der &Uuml;bertragung ein Fehler passier! Bitte sende uns doch eine E-Mail mit deinem Anliegen.<br><a href="mailto:mail@bioshiitake.tirol" style="text-decoration-line: underline;
+  text-decoration-color: red; color: red;">mail@bioshiitake.tirol</a></h2>';
+			}
+		
+			if(isset($_GET['error']) AND $_GET['error'] == 0){
+				echo '<h2 style="color: green; text-align: center;">Ihre Nachricht wurde erfolgreich ubermittelt!<br>Wir werden uns in bald bei Ihnen melden!</h2>';
+			}
+		?>
+
 			<div class="container">
 				<form action="submit.php" method="post">
 					<label for="name">Name *</label>
@@ -148,5 +159,18 @@
 			<p>BioShiitake Tirol | <a href="impressum.html">Impressum</a></p>
 			<!-- https://www.indivisus.at/ -->
 		</div>
+
+		<script>
+			//Optional client side validation, reduces server load.
+			document
+				.querySelector("form")
+				.addEventListener("submit", function (event) {
+					const honeypot = document.getElementById("testfield");
+					if (honeypot.value !== "") {
+						event.preventDefault(); // Prevent form submission
+						alert("Bot detected. Please try again later."); // Optional user feedback.
+					}
+				});
+		</script>
 	</body>
 </html>
