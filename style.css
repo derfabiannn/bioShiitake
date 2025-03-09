@@ -57,7 +57,7 @@ a {
 	color: white;
 	text-align: center;
 	padding: 12px;
-	margin-left: 20px;
+	margin: 0 30px;
 	text-decoration: none;
 	font-size: 18px;
 	line-height: 25px;
@@ -186,16 +186,11 @@ input[type="submit"]:hover {
 		padding: 1%;
 	}
 
-	/*.header a.header-logo {
-		display: none;
-	}*/
-
-	.header .header-image {
-		display: none;
+	.header {
+		padding: 10px 10px;
 	}
 
 	.header a {
-		float: none;
-		margin: auto;
+		margin: 0 5px;
 	}
 }
