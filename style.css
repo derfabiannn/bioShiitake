@@ -8,8 +8,7 @@
 :root {
   --primary-color: #525218;
   --secondary-color: #ad8035;
-  --other-color: #1c352d;
-  --other-secondary: #a5816c;
+  --other-primary: #1c352d;
 }
 
 * {
@@ -27,7 +26,7 @@ a {
 
 .box {
   margin: 20px 5%;
-  border: 2px solid var(--primary-color);
+  border: 2px solid var(--other-primary);
   padding: 2%;
 }
 
@@ -46,7 +45,7 @@ a {
 
 .header {
   overflow: hidden;
-  background-color: var(--primary-color);
+  background-color: var(--other-primary);
   padding: 20px 10px;
   position: sticky;
   top: 0;
@@ -110,7 +109,7 @@ h6 {
 }
 
 .hr-line {
-  border-top: 3px solid var(--primary-color);
+  border-top: 3px solid var(--other-primary);
   vertical-align: middle;
 }
 
@@ -141,7 +140,7 @@ select,
 textarea {
   width: 100%;
   padding: 12px;
-  border: 1px solid var(--primary-color);
+  border: 1px solid var(--other-primary);
   border-radius: 4px;
   box-sizing: border-box;
   margin-top: 6px;
@@ -160,7 +159,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background-color: var(--primary-color);
+  background-color: var(--other-primary);
 }
 
 .contact_container {
@@ -172,7 +171,7 @@ input[type="submit"]:hover {
 .footer {
   width: 100%;
   padding: 6px;
-  background-color: var(--primary-color);
+  background-color: var(--other-primary);
   color: white;
   text-align: center;
 }
@@ -190,7 +189,7 @@ input[type="submit"]:hover {
 @media screen and (max-width: 800px) {
   .box {
     margin: 10px 5%;
-    border: 2px solid var(--primary-color);
+    border: 2px solid var(--other-primary);
     padding: 1%;
   }
 
